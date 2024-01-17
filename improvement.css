@@ -1,0 +1,260 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+
+.patterns {
+    height: 50vh;
+    margin-bottom: -40vh;
+}
+svg text {
+  font-family: "Lora";
+  letter-spacing: 10px;
+  stroke: #428C4E;
+  font-size: 150px;
+  font-weight: 700;
+  stroke-width: 3;
+  animation: textAnimate 5s infinite alternate;
+  place-content: center;
+  margin-bottom: 0;
+}
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%);
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%, 0%);
+  }
+}
+
+
+.gallery {
+  --s: 100px; 
+  margin-bottom: 10vh;
+  height: 60vh;
+  display: grid;
+  place-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  position: relative;
+  width: 100%;
+  transform: translateY(100px);
+}
+.gallery input {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  inset: calc(50% - var(--s) / 3);
+  cursor: pointer;
+  --g: linear-gradient(#fff 0 0) no-repeat;
+  background: var(--g) 50% / var(--b, 0%) 3px, var(--g) 50%/3px var(--b, 0%);
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: radial-gradient(#83af9b, #000);
+}
+.gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: scale(0.1);
+  filter: brightness(0);
+  pointer-events: none;
+  transform-origin: var(--x) var(--y);
+  transition: 1s calc((var(--i) - 1) * 0.1s);
+}
+.gallery > img:nth-of-type(1) {
+  --i: 1;
+  --x: 150%;
+  --y: 150%;
+}
+.gallery > img:nth-of-type(2) {
+  --i: 2;
+  --x: 50%;
+  --y: 150%;
+}
+.gallery > img:nth-of-type(3) {
+  --i: 3;
+  --x: -50%;
+  --y: 150%;
+}
+.gallery > img:nth-of-type(4) {
+  --i: 4;
+  --x: 150%;
+  --y: 50%;
+}
+.gallery > img:nth-of-type(5) {
+  --i: 5;
+}
+.gallery > img:nth-of-type(6) {
+  --i: 6;
+  --x: -50%;
+  --y: 50%;
+}
+.gallery > img:nth-of-type(7) {
+  --i: 7;
+  --x: 150%;
+  --y: -50%;
+}
+.gallery > img:nth-of-type(8) {
+  --i: 8;
+  --x: 50%;
+  --y: -50%;
+}
+.gallery > img:nth-of-type(9) {
+  --i: 9;
+  --x: -50%;
+  --y: -50%;
+}
+
+.gallery:hover > input {
+  transform: translateY(calc(1.75 * var(--s))) scale(0.5) rotate(45deg);
+  --b: 70%;
+}
+
+.gallery:hover > input ~ img {
+  transform: scale(1);
+  filter: brightness(1);
+  pointer-events: initial;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h1 {
+  color: #00ff00;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.highlight {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.section {
+  border-left: 4px solid #00ff00;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  transition-duration: 0.6s;
+}
+
+.section:hover {
+  background-color: #525252;
+  transition-duration: 0.6s;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  margin-left: 20px;
+}
+
+.section-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-content ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.section-content ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+}
+
+.section-last {
+  background-color: #b7b6b6;
+  padding: 1vw;
+  padding-bottom: 0.5vw;
+  border-radius: 20px;
+}
+
+.section-last p {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h1 {
+  color: #00ff00;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.section {
+  border-left: 4px solid #00ff00;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  margin-left: 20px;
+}
+
+.section-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-content ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.section-content ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+}
