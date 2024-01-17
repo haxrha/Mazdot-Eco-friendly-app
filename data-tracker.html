@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="background" type="image/x-icon" href="files/mountain-background.jpg" />
+  <link href="data-tracker.css" rel="stylesheet" type="text/css" />
+  <title>MazDot</title>
+  <link rel="icon" type="image/x-icon" href="files/MazDot_Logo-thumbnail.png">
+  <link href="components/nav.css" rel="stylesheet" type="text/css" />
+  <link href="components/" rel="stylesheet" type="text/css" />
+  <link href="components/footer.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-header">
+        <a href="home.html"><img src="files/MazDot_Logo.png" alt="Logo"></a>
+        <a href="home.html" class="nav-title">MazDot</a>
+    </div>
+    <div class="nav-btn">
+    <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    </div>
+    <div class="nav-links">
+        <a href="data-tracker.html">Data Tracker</a>
+		    <a href="improvement.html">How to Improve</a>
+		    <a href="news.html">Green News</a>
+    </div>
+  </div>
+  <h1>Carbon Footprint</h1>
+  <div class="form-container">
+    <form id="form-data">
+      <label for="linkInput">Enter a Link:</label>
+      <input type="text" id="linkInput" name="linkInput" placeholder="https://www.example.com">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="data-results-container">
+    <div id="data-co2-grams"></div>
+    <div id="energy-use"></div>
+  </div>
+  <div class="response-container">
+
+    <div class="advice-container">
+      <div class="advice">
+        <p id="percentile"></p>
+      </div>
+      <div class="advice">
+        <p id="p-1"></p>
+        <img class="img" src="files/OIP.jfif"></img>
+      </div>
+      <div class="advice">
+        <p id="p-2"></p>
+        <img class="img" src="files/p2.jfif"></img>
+      </div>
+      <div class="advice">
+        <p id="p-3"></p>
+        <img class="img" src="files/refresh.jfif"> </img>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-container">
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+  </div>
+<div class="content flex">
+  <p><span>MazDot</span></p>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
